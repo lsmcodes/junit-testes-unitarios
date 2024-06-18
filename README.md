@@ -42,7 +42,7 @@ import org.junit.jupiter.api.Test;
 
 class ConversorTestes {
     @Test
-    void converterCelsiusParaFareinheit_DeveCalcular_QuandoReceberValorInvalido() {
+    void converterCelsiusParaFareinheit_DeveConverterCorretamente_QuandoReceberValorValido() {
         // Arrange (arranjar)
         Conversor conversor = new Conversor();
         double fareinheit = 74.3;
@@ -51,7 +51,7 @@ class ConversorTestes {
         // Act (agir)
         double celsiusParaFareinheit = conversor.converterCelsiusParaFareinheit(celsius);
 
-        //Assert (afirmar)
+        // Assert (afirmar)
         assertEquals(fareinheit, celsiusParaFareinheit);
     }
 }
