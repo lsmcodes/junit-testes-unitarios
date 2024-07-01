@@ -1,5 +1,22 @@
 # DIO - Trilha Testes e Gerenciamento de Dependências Java
-www.dio.me
+<div style="display:inline-block">
+        <picture  title="Java">
+                <source height="40" width="40" media="(prefers-color-scheme: light)" srcset="https://cdn.simpleicons.org/openjdk/000000">
+                <img height="40" width="40" src="https://cdn.simpleicons.org/openjdk/FFFFFF" />
+        </picture>
+        <picture  title="Apache Maven">
+                <source height="40" width="40" media="(prefers-color-scheme: light)" srcset="https://cdn.simpleicons.org/apachemaven/000000">
+                <img height="40" width="40" src="https://cdn.simpleicons.org/apachemaven/FFFFFF" />
+        </picture>
+        <picture  title="Spring Boot">
+                <source height="40" width="40" media="(prefers-color-scheme: light)" srcset="https://cdn.simpleicons.org/springboot/000000">
+                <img height="40" width="40" src="https://cdn.simpleicons.org/springboot/FFFFFF" />
+        </picture>
+        <picture  title="JUnit 5">
+                <source height="40" width="40" media="(prefers-color-scheme: light)" srcset="https://cdn.simpleicons.org/junit5/000000">
+                <img height="40" width="40" src="https://cdn.simpleicons.org/junit5/FFFFFF" />
+        </picture>
+</div>
 
 ## Repositório Original do Curso
 - [JUnit 5 Exemplos](https://github.com/willyancaetano/junit5-exemplos)
@@ -8,7 +25,7 @@ www.dio.me
 `JUnit 5` é a geração atual do framework de testes JUnit, que provê uma base moderna para `testes` do lado de desenvolvedor na JVM (Java Virtual Machine).
 
 ## Exercícios
-Este repositório contém um exercício que exemplifica a utilização do JUnit 5 e cobrem os seguintes temas:
+Este repositório contém um exercício que exemplifica a utilização do JUnit 5 e que cobre os seguintes temas:
 - Before e After
 - Assumptions e testes condicionais
 - Testando Exceptions
@@ -41,19 +58,19 @@ import io.github.lsmcodes.junit.Conversor;
 import org.junit.jupiter.api.Test;
 
 class ConversorTestes {
-    @Test
-    void converterCelsiusParaFareinheit_DeveConverterCorretamente_QuandoReceberValorValido() {
-        // Arrange (arranjar)
-        Conversor conversor = new Conversor();
-        double fareinheit = 74.3;
-        double celsius = 23.5;
+        @Test
+        void converterCelsiusParaFahrenheit_DeveConverterCorretamente_QuandoReceberValorValido() {
+                // Arrange (arranjar)
+                Conversor conversor = new Conversor();
+                double fahrenheit = 74.3;
+                double celsius = 23.5;
 
-        // Act (agir)
-        double celsiusParaFareinheit = conversor.converterCelsiusParaFareinheit(celsius);
+                // Act (agir)
+                double celsiusParaFahrenheit = conversor.converterCelsiusParaFahrenheit(celsius);
 
-        // Assert (afirmar)
-        assertEquals(fareinheit, celsiusParaFareinheit);
-    }
+                // Assert (afirmar)
+                assertEquals(fahrenheit, celsiusParaFahrenheit);
+        }
 }
 ```
 
@@ -78,7 +95,7 @@ A seguir estão as anotações utilizadas no exercício e suas respectivas descr
 O package da classe de teste deve ser o mesmo da classe original da qual as unidades estão sendo testadas. Por exemplo, no exercício contido no presente repositório há a classe `Conversor` no package `src/main/java/io/github/lsmcodes/junit`, a classe de teste que vai testar as unidades dessa classe deve estar no package `src/test/java/io/github/lsmcodes/junit`.
 
 ### Convenções de Nomenclatura de Casos de Testes
-Os nomes dos casos de testes devem ser descritivos de forma que seja possível compreender qual é o comportamento do teste pelo seu nome. Por exemplo, se há um método `converterCelsiusParaFareinheit(double celsius)` o caso de teste pode ter um nome como `converterCelsiusParaFareinheit_DeveLancarExcecao_QuandoReceberValorInvalido()`.
+Os nomes dos casos de testes devem ser descritivos de forma que seja possível compreender qual é o comportamento do teste pelo seu nome. Por exemplo, se há um método `converterCelsiusParaFahrenheit(double celsius)` o caso de teste pode ter um nome como `converterCelsiusParaFahrenheit_DeveLancarExcecao_QuandoReceberValorInvalido()`.
 
 ### 80% de Cobertura de Testes
 Quanto mais cobertura de testes para o código-fonte, melhor. Mas como regra geral o ideal é alcançar a cobertura de pelo menos `80% do código` com testes unitários. Adicionalmente, é possível utilizar ferramentas como `JaCoCo` e `Cobertura` junto com Maven ou Gradle para gerar relatórios de cobertura de código.
